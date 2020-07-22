@@ -77,20 +77,6 @@ int main()
     printf("Array: %s\n", semiSeq[j]);
   }
 
-
-  //primeSeqChar = *(semiSeq[0]+1);
-  //printf("%c" , primeSeqChar);
-
-
-
-
-
-
-
-
-
-
-
   free(sequence);
   free(semiSeq);
   fclose(file);
@@ -166,7 +152,7 @@ int calcScore(char* primeSeq , char* semiSeq , int* results){
   char primeSeqChar,semiSeqChar;
 
   for(int o=0;o<offset;o++){
-        for(int i=0;i<lenSemiSeq;i++){
+        for(int i=0;i<=lenSemiSeq;i++){
                 char* mutant = changeMutant(semiSeq,lenSemiSeq,i+1);
                 primeSeqChar = *(primeSeq+o+i);
                 semiSeqChar = *(semiSeq+i);
@@ -183,7 +169,6 @@ int calcScore(char* primeSeq , char* semiSeq , int* results){
                 }
         }
   }
-  printf("* %d , : %d , .%d");
   return 0;
 }
 
